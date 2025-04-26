@@ -1,5 +1,5 @@
 // Toggle Menu for Mobile Devices
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (CV Edon Gomes Leite.pdf) => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('nav');
 
