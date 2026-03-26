@@ -1,13 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   /* ===============================
-     Toggle Menu (Mobile)
+     Menu Hamburguer (Mobile)
   =============================== */
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('nav');
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    // Fecha menu ao clicar em um link
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
     });
   }
 
@@ -17,16 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnTopo = document.getElementById('btn-topo');
 
   if (btnTopo) {
-    // Mostrar / esconder botão ao rolar
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        btnTopo.style.display = 'flex';
-      } else {
-        btnTopo.style.display = 'none';
-      }
+      btnTopo.style.display = window.scrollY > 300 ? 'flex' : 'none';
     });
 
-    // Scroll suave para o topo
     btnTopo.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
