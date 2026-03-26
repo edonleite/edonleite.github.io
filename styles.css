@@ -200,3 +200,28 @@ footer {
     display: block;
   }
 }
+
+#btn-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2563eb; /* azul moderno */
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#btn-topo:hover {
+  background-color: #1e40af;
+  transform: translateY(-4px);
+}
